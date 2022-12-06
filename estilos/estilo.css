@@ -1,0 +1,9 @@
+*{
+    color:rgb(34, 31, 70);
+    font-family: Helvetica;
+    text-transform: capitalize;
+}
+
+body{
+    background-color: rgb(233, 255, 243);
+}

@@ -1,18 +1,18 @@
 import React from 'react';
 import '../hojas-de-estilo/Favoritos.css';
 
-function Favoritos() {
+function Favoritos(props) {
   return (
     <div className='contenedor-favoritos'>
       <img 
         className='imagen-favoritos'
-        src={require('../imagenes/desktop-debian.png')}
-        alt='Escritorio Ubuntu'
+        src={`${props.imagen}`}
+        alt='Imagen de referencia'
       />
       <div className='contenedor-texto-favoritos'>
-        <p className='nombre-favoritos'>Escritorio Debian</p>
-        <p className='cargo-favoritos'>Debian ORG</p>
-        <p className='texto-favoritos'>Esta es una de las distros mas antiguas, conocida por ser leyenda.</p>
+        <p className='nombre-favoritos'>Cancion {props.nombre}</p>
+        <p className='cargo-favoritos'>Escuchala aqui en <a href={`${props.web}`} > Youtube </a> </p>
+        <p className='texto-favoritos'>{props.descripcion}</p>
       </div>
     </div>
   );

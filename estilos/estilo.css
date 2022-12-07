@@ -1,12 +1,46 @@
 *{
-    color:rgb(34, 31, 70);
+    color:azure;
     font-family: Helvetica;
     text-transform: capitalize;
 }
 
 body{
-    background-color: rgb(233, 255, 243);
+    background-color: rgb(95, 94, 94);
+    margin: 0;
 }
+
+
+header {
+    background-color: rgb(65, 65, 65);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: relative;
+    top:0px;
+    left: 0px;
+}
+header h1{
+    font-style: italic;
+    font-size: 35pt;
+    padding: 0.5cm 0;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    vertical-align:middle;
+    user-select: none;
+    animation: titulo 3s infinite;
+}
+
+@keyframes titulo {
+    0%, 100% {text-shadow: -2px -2px red;}
+    25%      {text-shadow: 2px -2px rgb(0, 238, 255);}
+    50%      {text-shadow: 2px 2px blue;}
+    70%      {text-shadow: -2px 2px rgb(0, 238, 255);}
+}
+
+/*contenedores*/
 
 .favorito{
     width: 5cm;
@@ -17,7 +51,9 @@ body{
 .favorito img{
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 3px;
+    margin: 1px red solid;
+    -webkit-user-drag: none;
 }
 
 .favorito img:hover{
@@ -26,15 +62,22 @@ body{
 
 .favorito h4{
     position: relative;
-    top: -1.5cm;
+    top: -0.8cm;
     left: 0.2cm;
+    margin:0;
     color: azure;
     user-select: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
 }
 
 .cuadricula{
     list-style: none;
     padding: 0;
+    margin: 0.2cm;
+    box-sizing: border-box;
 }
 
 .cuadricula li{

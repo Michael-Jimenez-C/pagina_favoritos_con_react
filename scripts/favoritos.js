@@ -19,9 +19,13 @@ function cuad(botones){
     return ul;
 }
 
-let b1=boton("../multimedia/f1.jpg",'Meme1',"Na pá");
-let b2=boton("../multimedia/f1.jpg",'Meme2',"Na pá");
-root.render(cuad([b1,b2]));
+let rutas=["../multimedia/f1.jpg","../multimedia/f1.jpg","../multimedia/f1.jpg","../multimedia/f1.jpg","../multimedia/f1.jpg"]
+let titulos=['Meme1345678765434567765432345676543','Meme2','Meme3','Meme4','Meme5']
+let b=[]
+for(let i in rutas){
+    b.push(boton(rutas[i],titulos[i],"na pá"))
+}
+root.render(cuad(b));
 //const element = e('h1',{},"Prueba");
 //const s=e('p',{},"asdasdas")
 //root.render([element,s]);

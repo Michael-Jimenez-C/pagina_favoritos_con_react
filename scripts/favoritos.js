@@ -40,6 +40,3 @@ for(let i of IFavs){
     b.push(boton(i[0],i[1],i[2]))
 }
 root.render(cuad(b));
-//const element = e('h1',{},"Prueba");
-//const s=e('p',{},"asdasdas")
-//root.render([element,s]);

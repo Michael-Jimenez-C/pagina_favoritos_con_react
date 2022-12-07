@@ -1,13 +1,12 @@
 import React from 'react';
+import '../hojas-de-estilo/Favoritos.css';
 
-function Favoritos()
-{
-  return
-  (
+function Favoritos() {
+  return (
     <div className='contenedor-favoritos'>
       <img 
         className='imagen-favoritos'
-        src={require('../imagenes/desktop-ubuntu.png')}
+        src={require('../imagenes/desktop-debian.png')}
         alt='Escritorio Ubuntu'
       />
       <div className='contenedor-texto-favoritos'>

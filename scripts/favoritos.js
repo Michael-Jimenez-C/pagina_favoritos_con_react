@@ -19,7 +19,7 @@ function cuad(botones){
     return ul;
 }
 
-let rutas=["../multimedia/f1.jpg","../multimedia/f1.jpg","../multimedia/f1.jpg","../multimedia/f1.jpg","../multimedia/f1.jpg"]
+let rutas=["../multimedia/f1.jpg","../multimedia/1.jpg","../multimedia/f1.jpg","../multimedia/1.jpg","../multimedia/f1.jpg"]
 let titulos=['Meme1345678765434567765432345676543','Meme2','Meme3','Meme4','Meme5']
 let b=[]
 for(let i in rutas){

@@ -33,11 +33,11 @@ function cuad(botones){
 
 
 /*inicializacion de la página*/
-let rutas=["../multimedia/f1.jpg","../multimedia/1.jpg","../multimedia/f1.jpg","../multimedia/1.jpg","../multimedia/f1.jpg"]
-let titulos=['Meme1345678765434567765432345676543','Meme2','Meme3','Meme4','Meme5']
+let IFavs=[
+    ["https://i.ytimg.com/vi/W2MpGCL8-9o/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3kGUdhrVUVPeiSPM_CbYkWZv_ytYw",'Begging','Esta cancion es de las GOD']]
 let b=[]
-for(let i in rutas){
-    b.push(boton(rutas[i],titulos[i],"na pá"))
+for(let i of IFavs){
+    b.push(boton(i[0],i[1],i[2]))
 }
 root.render(cuad(b));
 //const element = e('h1',{},"Prueba");

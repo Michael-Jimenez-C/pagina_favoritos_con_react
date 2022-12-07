@@ -42,10 +42,13 @@ header h1{
 
 /*contenedores*/
 
+div.favorito{
+    position: relative;
+}
+
 .favorito{
     width: 5cm;
     height: 5cm;
-    padding: 4pt;
 }
 
 .favorito img{
@@ -55,10 +58,6 @@ header h1{
     -webkit-user-drag: none;
     object-fit: cover;
     object-position: center;
-}
-
-.favorito img:hover{
-    cursor: pointer;
 }
 
 .favorito h4{
@@ -72,6 +71,7 @@ header h1{
     overflow: hidden;
     white-space: nowrap;
     width: 80%;
+    text-shadow: 1px 1px rgb(119, 119, 119);
 }
 
 .cuadricula{
@@ -83,4 +83,35 @@ header h1{
 
 .cuadricula li{
     display: inline-block;
+    padding: 4pt;
+}
+
+
+
+.favdesc {
+    background-color: #535a7275;
+    margin: 0;
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s linear 0s;
+}
+
+div.favdesc:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.favdesc h4{
+    position: relative;
+    top:0.3cm;
+    width:max-content;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -166,3 +166,21 @@ div.xButton:hover{
     color: white;
     cursor:pointer;
 }
+
+
+.PopUpContenido{
+    position:absolute;
+    color: black;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.PopUpContenido a{
+    color: black;
+}
+.PopUpContenido h1{
+    color:black;
+}

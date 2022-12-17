@@ -15,7 +15,7 @@ class PopUp extends React.Component{
     }
 
     componentWillUnmount=()=>{
-        popUpDiv.remvoeChild(this.cnt);
+        popUpDiv.removeChild(this.cnt);
     }
     render(){
         const {children}=this.props;
@@ -29,22 +29,30 @@ class PopUp extends React.Component{
 const e = React.createElement;
 const rootd=document.getElementById('favs');
 const root = ReactDOM.createRoot(rootd);
+const pp = ReactDOM.createRoot(document.getElementById('popUpContainer'));
 
-
-/*onClick:()=>{'PopUp',{},e('div',{className:"popupfondo"},
-    e('div',{className:'popup'},
-    [e('div',{className:"xButton",},'x')]))}*/
+function cerrarPopUp(){
+    pp.render();
+    popUpDiv.style="width:0;height:0;";
+}
 
 function desc(titulo, desc,url){
     let popup=e(PopUp,{className:"popupfondo"},
         e('div',{className:'popup'},[
-        e('div',{className:"xButton",},'x')
+        e('div',{className:"xButton",onClick:()=>{cerrarPopUp()}},'x'),
+        e('div',{className:"PopUpContenido"},[
+            e('h1',{},titulo),
+            desc+" ",
+            e('a',{'href':url},"Escuchar en youtube")
+        ])
     ]))
 
-    const pp = ReactDOM.createRoot(document.getElementById('popUpContainer'));
 
-
-    let c=e("div",{className:"favdesc", onClick:(titulo,desc)=>{pp.render(popup)}},[
+    let c=e("div",{className:"favdesc", onClick:()=>{
+        pp.render(popup);
+        console.log("ok");
+        return true;
+    }},[
         e('h4',{},titulo),
         e('br',{},null),
         e('h5',{},desc)

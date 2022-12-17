@@ -117,7 +117,14 @@ div.favdesc:hover{
     margin-left: auto;
     margin-right: auto;
 }
-/*
+
+
+#popUpContainer{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
 div.popupfondo{
     background-color: rgba(0, 0, 0, 0.336);
     position:absolute;
@@ -151,10 +158,11 @@ div.xButton{
     position:absolute;
     right: 0;
     top: 0 ;
+    user-select: none;
 }
 
 div.xButton:hover{
     background-color: rgb(255, 77, 77);
     color: white;
     cursor:pointer;
-}*/
+}

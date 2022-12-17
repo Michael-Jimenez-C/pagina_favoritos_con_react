@@ -1,29 +1,56 @@
+
+const popUpDiv=document.getElementById('popUpContainer');
+
+class PopUp extends React.Component{
+    constructor(){
+        super();
+        this.cnt=document.createElement('div');
+        this.cnt.className="popupfondo";
+
+        popUpDiv.style="width:100%;height: "+innerHeight+"px;";
+    }
+
+    componentDidMount=()=>{
+        popUpDiv.appendChild(this.cnt);
+    }
+
+    componentWillUnmount=()=>{
+        popUpDiv.remvoeChild(this.cnt);
+    }
+    render(){
+        const {children}=this.props;
+        
+        return ReactDOM.createPortal(children,this.cnt);
+    }
+}
+
+//*https://www.youtube.com/watch?v=6BGDRiOFVUs
+
 const e = React.createElement;
 const rootd=document.getElementById('favs');
 const root = ReactDOM.createRoot(rootd);
 
-/*todo esto funciona pero no he podido hacer que aparezca al pulsar la caratula de la cancion
-function borrarEmergente(){
-    s=document.querySelector(".popupfondo");
-    if(s!=null){
-        s.remove();
-    }
-}
 
-function popup(){
-    let c=e('div',{className:"popupfondo"},
-        e('div',{className:'popup'},[e('div',{className:"xButton",'onClick':borrarEmergente},'x')]));
-    return c;
-}*/
+/*onClick:()=>{'PopUp',{},e('div',{className:"popupfondo"},
+    e('div',{className:'popup'},
+    [e('div',{className:"xButton",},'x')]))}*/
 
 function desc(titulo, desc,url){
-    let c=e("div",{className:"favdesc"},[
+    let popup=e(PopUp,{className:"popupfondo"},
+        e('div',{className:'popup'},[
+        e('div',{className:"xButton",},'x')
+    ]))
+
+    const pp = ReactDOM.createRoot(document.getElementById('popUpContainer'));
+
+
+    let c=e("div",{className:"favdesc", onClick:(titulo,desc)=>{pp.render(popup)}},[
         e('h4',{},titulo),
         e('br',{},null),
         e('h5',{},desc)
     ])
     let w=e("a",{'href':url},c);
-    return w;
+    return c;
 }
 
 function boton(imagen, titulo, descripcion,url){

@@ -1,0 +1,33 @@
+:root {
+  --border-radius: 12px;
+  --fuente:  Helvetica;
+  --fondo: #e4e4e4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: rgb(95, 94, 94);
+  }
+}
+
+* {
+  color:azure;
+  font-family: var(--fuente);
+  text-transform: capitalize;
+}
+
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(143deg, rgba(104,100,184,1) 0%, rgba(57,56,66,1) 36%, rgba(0,0,0,1) 66%, rgba(166,96,96,1) 100%);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
